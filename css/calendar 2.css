@@ -1,0 +1,114 @@
+
+.days{
+	padding: 0;
+}
+/* 日历 */
+.calendar {
+	width: 350px;
+	height:max-content;
+	color: #F4EDED;
+	border-radius: 10px;
+	overflow: hidden;
+	font-size :	14px;
+	letter-spacing: 2.5px;
+	font-weight: 700;
+	padding: 20px 20px 0;
+}
+.calendar .month {
+	padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.calendar .month .arrow {
+	width: 20px;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+.calendar .mintui-arrowright {
+	font-size: 14px; 
+	width: 10px;
+	height: 10px;
+	border-top: 2px solid #F4EDED;
+	border-right: 2px solid #F4EDED;
+	transform: rotate(45deg);
+}
+
+.calendar .arrowleft {
+	transform: rotate(-135deg);
+}
+
+.calendar .month .year-month {
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	color: #F4EDED;
+}
+
+
+
+
+.calendar .weekdays {
+	/*头部星期*/
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 0;
+}
+
+.calendar .weekdays li {
+	display: inline-block;
+	text-align: center;
+}
+
+.calendar .days {
+	/*日期*/
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	padding-bottom: 0.2rem;
+}
+
+.calendar .days li {
+	list-style-type: none;
+	width: 14.2%;
+	padding-bottom: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.calendar .days li .eachday {
+	position: relative;
+	width: 40px;
+	height: 30px;
+	display: flex;
+	border:1px solid #F4EDED;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}
+.eachday.checked{
+	border:0;
+	background: linear-gradient(226.02deg, #FFDA93 4.21%, #F56638 99.47%);
+	color:#240173;
+}
+
+
+.calendar .days li .other {
+	color: rgb(155, 155, 155);
+	border:0;
+	background-color: #535257;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register_keyword</title>
+    <!-- 引用favicon -->
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +25,6 @@
     <link rel="stylesheet" href="./css/ON_FIRE.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    
-         <!-- 引用favicon -->
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- 6/25 怎麼讓github可以串起來? -->
 
@@ -32,20 +32,20 @@
         * {
             /* outline: #FF9933 1px solid; */
         }
-    
+
         body {
             background-color: #240173;
         }
-    
+
         .ab-container {
             width: 75%;
             max-width: 1080px;
             margin: auto;
             /* outline: 10px solid rgb(88, 218, 18); */
             position: relative;
-    
+
         }
-    
+
         /* 套件的Container */
         .ferris-wheel-container {
             width: 564px;
@@ -56,16 +56,16 @@
             margin-right: auto;
             /* outline: #cf10c9 5px solid; */
         }
-    
+
         /* 標題 */
         .ab-title-section {
             margin-top: 158px;
-    
-    
+
+
         }
-    
-    
-    
+
+
+
         .wheel {
             width: 100px;
             height: 100px;
@@ -79,7 +79,7 @@
             background-size: cover;
             z-index: 50;
         }
-    
+
         /* 球球裡面的文字要反著轉 */
         .ab-p-rotate {
             height: 100%;
@@ -92,11 +92,11 @@
             color: #240173;
             /* 讓關鍵字選項變圓形 */
             border-radius: 50%;
-    
-    
-    
+
+
+
         }
-    
+
         .wheel:before {
             /* content: '';
                 width: 400px;
@@ -107,70 +107,70 @@
                 top: -200px;
                 left: -200px; */
         }
-    
+
         .support {
             width: 190px;
             border-bottom: 2px solid #F4EDED;
             position: absolute;
             background-repeat: 50%;
         }
-    
+
         .support:nth-child(1) {
             top: 28px;
             left: 48px;
             transform-origin: left;
             transform: rotate(-90deg);
         }
-    
+
         .support:nth-child(2) {
             top: 60px;
             left: 38px;
             transform-origin: left;
             transform: rotate(125deg);
         }
-    
+
         .support:nth-child(3) {
             top: 43px;
             left: 31px;
             transform-origin: left;
             transform: rotate(-180deg);
         }
-    
+
         .support:nth-child(4) {
             top: 43px;
             left: 68px;
             transform-origin: left;
             transform: rotate(0deg);
         }
-    
+
         .support:nth-child(5) {
             top: 65px;
             left: 60px;
             transform-origin: left;
             transform: rotate(50deg);
         }
-    
+
         .support:nth-child(6) {
             top: 10px;
             left: 10px;
             transform-origin: left;
             transform: rotate(225deg);
         }
-    
+
         .support:nth-child(7) {
             top: 10px;
             left: 45px;
             transform-origin: left;
             transform: rotate(-45deg);
         }
-    
+
         .support:nth-child(8) {
             top: 35px;
             left: 10px;
             transform-origin: left;
             transform: rotate(135deg);
         }
-    
+
         .seat {
             width: 80px;
             height: 80px;
@@ -179,7 +179,7 @@
             top: 10px;
             left: 10px;
         }
-    
+
         .seat:nth-child(9) {
             background-color: #FAE8C6;
             top: -240px;
@@ -187,13 +187,13 @@
             height: 80px;
             width: 80px;
         }
-    
+
         .seat:nth-child(10) {
             background-color: #FAE8C6;
             top: 210px;
             left: -130px;
         }
-    
+
         .seat:nth-child(11) {
             background-color: rgb(246, 104, 58);
             top: 0px;
@@ -201,7 +201,7 @@
             height: 130px;
             width: 130px;
         }
-    
+
         .seat:nth-child(12) {
             background-color: #FCA953;
             top: 5px;
@@ -209,7 +209,7 @@
             height: 96px;
             width: 96px;
         }
-    
+
         .seat:nth-child(13) {
             background-color: rgb(246, 104, 58);
             top: 190px;
@@ -217,29 +217,29 @@
             height: 130px;
             width: 130px;
         }
-    
+
         .seat:nth-child(14) {
             background-color: palegreen;
             top: -170.5px;
             left: -170.5px;
         }
-    
+
         .seat:nth-child(15) {
             background-color: #FF9933;
             top: -162.5px;
             left: 182.5px;
         }
-    
+
         .seat:nth-child(16) {
             background-color: plum;
             top: 172.5px;
             left: -172.5px;
         }
-    
+
         .btn-pc-big-orange {
             margin: 83px auto 0;
         }
-    
+
         .btn-pc-big-orange a {
             color: #062767;
             text-decoration: none;
@@ -248,33 +248,33 @@
             width: 158px;
             height: 38px;
         }
-    
+
         /* 略過btn */
         .btn-pc-skip {
             margin: 20px auto;
             width: 34px;
         }
-    
+
         a {
             text-decoration: underline;
             color: #AFAFAF;
             font-size: 14px;
         }
-    
+
         /* animation */
         @keyframes turn {
             100% {
                 transform: rotate(360deg);
             }
         }
-    
+
         /* 讓字體反著轉 */
         @keyframes protate {
             100% {
                 transform: rotate(-360deg);
             }
         }
-    
+
         /* 因為原本的中心點wheel會跟著轉而且沒有置頂 再包一層div讓他不會轉＆置頂 */
         .ab_top_selfie {
             position: absolute;
@@ -294,48 +294,49 @@
 
 <body>
 
-<div class="ab-container">
-    <div class="ab-title-section pc-title-32 text-pink">
-        <div class="ab-tilte">關鍵字篩選結果</div>
-        <div class="ferris-wheel-container">
-            <div class="ab_top_selfie"></div>
-            <div class="wheel">
-                <div class="support"></div>
-                <div class="support"></div>
-                <div class="support"></div>
-                <div class="support"></div>
-                <div class="support"></div>
+    <div class="ab-container">
+        <div class="ab-title-section pc-title-32 text-pink">
+            <div class="ab-tilte">關鍵字篩選結果</div>
+            <div class="ferris-wheel-container">
+                <div class="ab_top_selfie"></div>
+                <div class="wheel">
+                    <div class="support"></div>
+                    <div class="support"></div>
+                    <div class="support"></div>
+                    <div class="support"></div>
+                    <div class="support"></div>
 
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat">
-                    <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
-                </div>
-                <div class="seat">
-                    <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
-                </div>
-                <div class="seat">
-                    <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
-                </div>
-                <div class="seat">
-                    <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
-                </div>
-                <div class="seat">
-                    <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat">
+                        <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
+                    </div>
+                    <div class="seat">
+                        <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
+                    </div>
+                    <div class="seat">
+                        <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
+                    </div>
+                    <div class="seat">
+                        <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
+                    </div>
+                    <div class="seat">
+                        <div class="ab-p-rotate pc-middle-title-20 text-pink">placeholder</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="btn-pc-big-orange"><a href="Register_psychological test animation.html">下一步</a></div>
-    <div class="btn-pc-skip">
-        <a href="Register_psychological test animation.php">略過</a><br>
-    </div>
+        <div class="btn-pc-big-orange"><a href="Register_psychological test animation.html">下一步</a></div>
+        <div class="btn-pc-skip">
+            <a href="Register_psychological test animation.php">略過</a><br>
+        </div>
 
 
-</div>
-    
+    </div>
+
 </body>
+
 </html>
 
 
@@ -352,7 +353,7 @@
 
 <script>
 
-    $(function() {
+    $(function () {
         if (mateKeyword !== undefined) {
             splitToArray(mateKeyword);
             selectCount = userSelect.length;
@@ -364,7 +365,7 @@
         }
 
         function setSelected() {
-            $seat.each(function() {
+            $seat.each(function () {
                 const $this = $(this),
                     keyword = userSelect[0].split(':'),
                     key = keyword[0],

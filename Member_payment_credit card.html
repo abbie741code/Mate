@@ -1,12 +1,39 @@
-<?php
-session_start();
-$pageName = 'index';
-$title = 'Mate';
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<?php include __DIR__ . '/parts/html-head.php' ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member_personal-data</title>
+    <!-- 引用favicon -->
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
 
-<!-- 5/20 會員中心_付款方式：信用卡 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/ON_FIRE.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- 引用背景 -->
+    <link rel="stylesheet" href="./css/amazing-bg.css">
+    <!-- 引用lightbox -->
+    <link rel="stylesheet" href="./css/Lightbox.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./JS/jquery-3.6.0.js"></script>
 
 
 <style>
@@ -398,11 +425,11 @@ $title = 'Mate';
         background: #AFAFAF;
     }
 </style>
+</head>
 
 
-<?php include __DIR__ . '/parts/general-bg.php' ?>
-<?php include __DIR__ . '/parts/navbar-user.php' ?>
 
+<body>
 <div class="page d-flex ">
     <div class="left-nav"></div>
     <div class="right-content flex-grow-1 d-flex justify-content-center">
@@ -483,6 +510,8 @@ $title = 'Mate';
     </div>
 </div>
 
+</body>
+
 <?php include __DIR__ . '/parts/scripts-bg-navbar-user.php' ?>
 <?php include __DIR__ . '/parts/scripts-lightbox.php' ?>
 
@@ -524,4 +553,3 @@ $title = 'Mate';
     })
     */
 </script>
-<?php include __DIR__ . '/parts/html-foot.php' ?>

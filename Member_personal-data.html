@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member_personal-data</title>
+    <!-- 引用favicon -->
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/ON_FIRE.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- 引用背景 -->
+    <link rel="stylesheet" href="./css/amazing-bg.css">
+    <!-- 引用lightbox -->
+    <link rel="stylesheet" href="./css/Lightbox.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./JS/jquery-3.6.0.js"></script>
+
+    <style>
+        * {
+            /* outline: #FF9933 1px solid; */
+            /* color:#F4EDED; */
+
+        }
+
+        body {
+            min-width: 375px;
+        }
+
+        div,
+        p {
+            margin-bottom: 0px;
+        }
+
+        .page {
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-nav {
+            width: 316px;
+            min-width: 316px;
+            height: 100vh;
+        }
+
+        .content {
+            width: 80%;
+            max-width: 904px;
+            margin-top: 110px;
+            /*待討論*/
+            overflow: hidden;
+        }
+
+        .content1 {
+            display: none;
+            width: 80%;
+            max-width: 904px;
+            background-color: #240173;
+            overflow: hidden;
+            margin-top: 34px;
+        }
+
+        .jt-title {
+            margin-bottom: 57px;
+        }
+
+        .pc-title-32 {
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+        }
+
+
+        /* -------------------------------------- */
+        /* 上半部-2個左右header的container */
+        .ab-header-container {
+            width: 902px;
+            height: 70px;
+            /* outline: #ff60af 1px solid; */
+        }
+
+        /* 上半部-left-header */
+        .ab-left-header {
+            width: 274px;
+            height: 51px;
+            /* outline: #FDBC44 1px solid; */
+
+        }
+
+        /* 上半部-right-header  */
+        .ab-right-header {
+            width: 321px;
+            height: 51px;
+            margin: 0 auto;
+            /* outline: #0000ff 1px solid; */
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .ab-ballon-icon {
+            height: 37px;
+            width: 30px;
+            overflow: hidden;
+            position: absolute;
+            top: -45px;
+            right: 100px;
+        }
+
+        .ballon-text {
+            color: #000000;
+            position: absolute;
+            top: 20%;
+            left: 7%;
+            /* font-family: Noto Looped Thai; */
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 12px;
+            letter-spacing: 0px;
+
+
+        }
+
+        .ab-ballon-icon img {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            margin-bottom: 10px;
+        }
+
+        .ab-progress {
+            width: 284px;
+            height: 12px;
+            border-radius: 8px;
+            background: #FFFFFF;
+            margin: 5px auto 5px;
+            /* outline: #FFFFFF 1px solid; */
+            position: relative;
+        }
+
+        .pc-middle-title-20,
+        .pc-regular-text-16,
+        .pc-small-title-16,
+        .pc-tag-12,
+        .pc-hint-14,
+        .kk-small-title,
+        .pc-title-32,
+        p,
+        a {
+            color: #F4EDED;
+        }
+
+        .ab-progress-line {
+            width: 60%;
+            height: inherit;
+            border-radius: 25px 0 0 25px;
+            transition: width .2s linear;
+            background: linear-gradient(45deg, #F66F40, #FFD38D);
+
+        }
+
+        /* <!-- 中間tabs區 --> */
+        .kk-tabs {
+            margin-top: 79px;
+            margin-bottom: 56px;
+        }
+
+        .kk-tab {
+            width: 184px;
+            height: 48px;
+            text-align: center;
+        }
+
+        /* tab金線 */
+        .kk-tab-purchase-history {
+            border-bottom: 2px solid #FFD58E;
+            cursor: pointer;
+        }
+
+        /* tab灰線 */
+        .kk-tab-subscription {
+            border-bottom: 1px solid #FFFFFFB2;
+            cursor: pointer;
+        }
+
+        /* 下半部-content區(分左右兩區) */
+        .content-section {
+            /* outline: #EA3A00 solid 2px; */
+
+
+        }
+
+
+
+        /* 下半部-content區(左邊大頭貼區)  */
+        .wrap-allcard {
+            position: relative;
+            /* outline: #00BB00 5px solid; */
+            width: 316px;
+            height: 555px;
+
+        }
+
+        .container {
+            width: 316px;
+            height: 555px;
+            border-radius: 10px;
+            background: linear-gradient(148.71deg, rgba(177, 177, 177, 0.24) -4.59%, rgba(44, 44, 44, 0) 84.27%), linear-gradient(148.71deg, rgba(177, 177, 177, 0.24) -4.59%, rgba(44, 44, 44, 0) 84.27%) !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* outline: #faf4ff 3px solid; */
+        }
+
+
+        .bg-color {
+            width: 316px;
+            height: 555px;
+            background: rgba(44, 44, 44, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+        }
+
+        .bg-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 316px;
+            height: 555px;
+            border: solid 1px transparent;
+            border-radius: 20px;
+            background-image: linear-gradient(#09005F, #09005F),
+                linear-gradient(135deg, hsla(0, 0%, 100%, 0.283), #ffffff00);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            border-radius: 10px;
+
+        }
+
+
+        .major_selfie {
+            width: 230px;
+            height: 230px;
+            background-image: url(./imgs/user-pic.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+            border: 1px solid #F4EDED;
+            margin: auto;
+            margin-top: 43px;
+            /* text-align: center; */
+            z-index: 999;
+        }
+
+
+        .minors_container {
+            width: 230px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: auto;
+            margin-top: 8px;
+
+
+        }
+
+        .minor_selfie {
+            width: 110px;
+            height: 110px;
+            border: 1px solid #F4EDED;
+            border-radius: 5px;
+            /* background-image: url(/img/Gawr_Gura.png); 
+            background-repeat: no-repeat;
+            background-size: cover; */
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .margin-right {
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .addpic_1 {
+            width: 33px;
+            height: 110px;
+
+        }
+
+        .addpic_major {
+            width: 33px;
+            height: 230px;
+        }
+
+        /* ----------------------------- */
+
+        /* 下半部-content區(右邊資料欄位區) */
+        /* ab-personal-wrap是包含個人資料欄位＋scroll bar  */
+        .ab-personal-wrap {
+            /* outline: #BF0060 1px solid; */
+            width: 50%;
+            margin: auto;
+            display: flex;
+
+        }
+
+        .ab-personaldata-section {
+            width: 100%;
+            margin: auto;
+            /* outline: #CAFFFF 10px solid; */
+        }
+
+        /* 下拉式選單區的css */
+        /* ------------------------------- */
+        /* scrollbar還沒做完 -要用fix & scroll */
+        /* .kk-scrollbar-all {
+        height: 520px;
+        width: 2px;
+        background-color: rgba(255, 255, 255, 0.48);
+        margin-left: 42px;
+        margin-right: 42px;
+        margin-top: 42px;
+        position: relative;
+    }
+
+    .kk-scroll-ball {
+        width: 9px;
+        height: 31px;
+        border-radius: 10px;
+        background-color: #F4EDED;
+        position: absolute;
+        top: 0;
+        left: -4.5px;
+    } */
+
+        .jt-form-data {
+            margin-bottom: 27px;
+        }
+
+        input[type=text],
+        input[type=select] {
+            background: transparent;
+            border: none;
+            /* border-bottom: 1px solid #ffffffc1; */
+        }
+
+        input[type=date] {
+            background: transparent;
+            border: none;
+            /* border-bottom: 1px solid #ffffffc1; */
+        }
+
+        .jt-address-textbox {
+            outline: 0;
+            border: none;
+            border-bottom: 1px solid #ffffffc1;
+        }
+
+        /* select選擇器不用➕點 (這是主欄位) (pc-hint)*/
+        select {
+            width: 100%;
+            height: 35px;
+            /* padding-left: 10px; */
+            /* text-hint提示字 */
+            color: #AFAFAF;
+            background: transparent;
+            /* outline: none; */
+            border: transparent;
+            border-bottom: solid 1px #F4EDED;
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+        }
+
+        /* 下拉式選單裡的option*/
+        select option {
+            background: #664D9D;
+            color: #F4EDED;
+            outline: none;
+            border: none;
+            z-index: -2;
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+        }
+
+        /* 上網查到改變placeholder(選項提示字）的用法 */
+        ::-webkit-input-placeholder {
+            /* Chrome, Safari */
+            /* pc-hint */
+            color: #AFAFAF;
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+        }
+
+
+        /* 留言板margin設不知道為啥不能margin:auto */
+        .ab-form {
+            width: 100%;
+            /* outline: #F00F40 solid 5px; */
+        }
+
+        /* 留言板樣式設定 */
+        textarea {
+            width: 450px;
+            height: 144px;
+            background: transparent;
+            border: 1px #F4EDED solid;
+            font-family: 'Noto Sans', sans-serif;
+            ;
+            font-size: 18px;
+            color: #AFAFAF;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 2.5px;
+            margin: 3px;
+            /* outline: #00AEAE solid 2px; */
+
+        }
+
+        /* ----------------------------- */
+        /* on fire css區 */
+        .text-hint p {
+            margin: 0;
+            border-bottom: solid 1px #F4EDED;
+            width: 100%;
+            /* padding-left: 10px; */
+        }
+
+        .btn-pc-big-orange {
+            margin: auto;
+            margin-top: 60px;
+
+
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 0.6;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="page d-flex text-pink ">
+        <div class="gg-blur"></div>
+        <!-- 儲存btn(複製LB-lightbox整個div ，id 內容自己修改) -->
+        <div class="LB-lightbox " id="btn1">
+            <div class="LB-lightbox1">
+                <div class="LB-close_btn"></div>
+                <div class="LB-section d-flex justify-content-between flex-column">
+                    <div class="LB-title d-flex pc-title-32 justify-content-center LB-ttitle">
+                        <div class="LB-left text-linear-orange mr-2">&lt;</div>
+                        <p class="text-pink">儲存成功</p>
+                        <div class="LB-right text-linear-orange ml-2">&gt;</div>
+                    </div>
+                    <div class="LB-content align-items-center d-flex flex-column pc-small-title-16 LB-text">
+                        <p class="text-pink ">現在可以前往首頁</p>
+                        <p class="text-pink ">邀約新朋友一起聚餐約會！</p>
+                    </div>
+                    <!-- 這裡幫按鈕加個href (style="cursor: pointer;" onclick="window.location='./main-login.php';")-->
+                    <div class="d-flex justify-content-center">
+                        <div class="btn-pc-orange LB-btn" style="cursor: pointer;"
+                            onclick="window.location='./main-login afterfillin.php';">前往配對</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-nav"></div>
+        <div class="right-content flex-grow-1 d-flex justify-content-center mb-5">
+            <div class="content">
+                <!--  上半部-個人資料標題 -->
+                <div class="title d-flex flex-wrap justiy-content-between jt-title">
+                    <div class="mr-3">
+                        <p class="pc-title-32 text-pink">個人資料</p>
+                    </div>
+                </div>
+
+                <!--  上半部-個人資料header區（有左邊說明區與右邊進度條區） -->
+                <div class="ab-header-container d-flex justify-content-between align-items-center">
+                    <div class="ab-left-header">
+                        <p class="pc-small-title-16 text-pink">個人資料完整度</p>
+                        <p class="pc-hint text-pink">資訊完成度愈高，能提高配對準確度！</p>
+                    </div>
+
+                    <div class="ab-right-header">
+                        <div class="ab-progress">
+                            <div class="ab-ballon-icon">
+                                <img src="./imgs/location-pin-01.png" alt="">
+                                <div class="ballon-text">60%</div>
+                            </div>
+                            <div class="ab-progress-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 中間tab區 -->
+                <div class="kk-tabs d-flex">
+                    <div class="kk-tab kk-tab-purchase-history pc-small-title-16 " style="cursor: pointer;"
+                        onclick="window.location='./Member_personal-data.php';">
+                        <p>個人資料</p>
+                    </div>
+                    <div class="kk-tab kk-tab-subscription pc-small-title-16 " style="cursor: pointer;"
+                        onclick="window.location='./Member_personal-hobby.php';">
+                        <p>興趣喜好</p>
+                    </div>
+                    <div class="kk-tab kk-tab-subscription pc-small-title-16" style="cursor: pointer;"
+                        onclick="window.location='./Member_personal-freetime-in-3days.php';">
+                        <p>3日內有空時間</p>
+                    </div>
+                    <div class="kk-tab kk-tab-subscription pc-small-title-16" style="cursor: pointer;"
+                        onclick="window.location='./Member_personal-engineer-verify.php';">
+                        <p>工程師驗證</p>
+                    </div>
+                    <div class="kk-tab kk-tab-subscription pc-small-title-16" style="cursor: pointer;"
+                        onclick="window.location='./Member_personal-preference.php';">
+                        <p>對象偏好</p>
+                    </div>
+                </div>
+
+                <!-- 下半部-content區(左邊大頭照＋右邊資料欄位）-->
+                <div class="content-section d-flex justify-content-between">
+                    <div class="wrap-allcard">
+                        <div class="bg-color"></div>
+                        <div class="bg-line"></div>
+                        <div class="container">
+                            <div class=all_selfies>
+                                <!-- 增加照片 -->
+                                <div id="" class="major_selfie">
+
+                                    <!-- <input type="file" id="imgUpload1" accept="image/png, image/jpeg" style="display:none" />
+                                    <a id="uploadButton1" href="" class="wrap-addpic"> -->
+                                    <!-------->
+                                    <!-- <svg class="addpic_major" data-name="addpic" widxmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.37 171.53">
+                                            <defs>
+                                                <style>
+                                                    .cls-1 {
+                                                        fill: #f4eded;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <path class="cls-1" d="M114.87,82.67V93.44l-1.33.51c-7.82-11.71-15.65-23.41-23.81-35.62L65,91c-2.86-5.51-5.35-10.34-8.35-16.13-7.9,10.48-15.4,20.44-23.55,31.24,2.5.12,4.19.28,5.89.28,15.28,0,30.56.13,45.84-.07,4.14,0,5.53,1.35,5.41,5.44-.24,8.13-.16,16.28,0,24.42,0,3.19-1.17,4.31-4.41,4.3-20.59-.12-41.19.07-61.78-.12-10.6-.1-17.19-7.53-17.23-19-.08-23.09,0-46.18,0-69.27,0-8.47,0-16.94,0-25.41.09-12.29,7-19.18,19.14-19.18q51.57,0,103.14,0c11.79,0,18.63,6.77,18.65,18.4,0,17.27-.11,34.55.09,51.82,0,4-1.19,5.15-5.09,5C133.63,82.5,124.54,82.67,114.87,82.67Z" />
+                                            <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21" rx="3.52" />
+                                            <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21" rx="3.52" transform="translate(270.71 -7.18) rotate(90)" />
+                                        </svg>
+                                    </a> -->
+                                </div>
+
+                                <div class="minors_container">
+                                    <!-- 增加照片 -->
+                                    <div id="image2" class="minor_selfie margin-right ">
+                                        <input type="file" id="imgUpload2" accept="image/png, image/jpeg"
+                                            style="display:none" />
+                                        <a id="uploadButton2" href="" class="wrap-addpic">
+                                            <!-------->
+                                            <svg class="addpic_1" data-name="addpic"
+                                                widxmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.37 171.53">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #f4eded;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M114.87,82.67V93.44l-1.33.51c-7.82-11.71-15.65-23.41-23.81-35.62L65,91c-2.86-5.51-5.35-10.34-8.35-16.13-7.9,10.48-15.4,20.44-23.55,31.24,2.5.12,4.19.28,5.89.28,15.28,0,30.56.13,45.84-.07,4.14,0,5.53,1.35,5.41,5.44-.24,8.13-.16,16.28,0,24.42,0,3.19-1.17,4.31-4.41,4.3-20.59-.12-41.19.07-61.78-.12-10.6-.1-17.19-7.53-17.23-19-.08-23.09,0-46.18,0-69.27,0-8.47,0-16.94,0-25.41.09-12.29,7-19.18,19.14-19.18q51.57,0,103.14,0c11.79,0,18.63,6.77,18.65,18.4,0,17.27-.11,34.55.09,51.82,0,4-1.19,5.15-5.09,5C133.63,82.5,124.54,82.67,114.87,82.67Z" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" transform="translate(270.71 -7.18) rotate(90)" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <!-- 增加照片 -->
+                                    <div id="image3" class="minor_selfie ">
+                                        <input type="file" id="imgUpload3" accept="image/png, image/jpeg"
+                                            style="display:none" />
+                                        <a id="uploadButton3" href="" class="wrap-addpic">
+                                            <!-------->
+                                            <svg class="addpic_1" data-name="addpic"
+                                                widxmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.37 171.53">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #f4eded;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M114.87,82.67V93.44l-1.33.51c-7.82-11.71-15.65-23.41-23.81-35.62L65,91c-2.86-5.51-5.35-10.34-8.35-16.13-7.9,10.48-15.4,20.44-23.55,31.24,2.5.12,4.19.28,5.89.28,15.28,0,30.56.13,45.84-.07,4.14,0,5.53,1.35,5.41,5.44-.24,8.13-.16,16.28,0,24.42,0,3.19-1.17,4.31-4.41,4.3-20.59-.12-41.19.07-61.78-.12-10.6-.1-17.19-7.53-17.23-19-.08-23.09,0-46.18,0-69.27,0-8.47,0-16.94,0-25.41.09-12.29,7-19.18,19.14-19.18q51.57,0,103.14,0c11.79,0,18.63,6.77,18.65,18.4,0,17.27-.11,34.55.09,51.82,0,4-1.19,5.15-5.09,5C133.63,82.5,124.54,82.67,114.87,82.67Z" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" transform="translate(270.71 -7.18) rotate(90)" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <!-- 增加照片 -->
+                                    <div id="image4" class="minor_selfie margin-right ">
+                                        <input type="file" id="imgUpload4" accept="image/png, image/jpeg"
+                                            style="display:none" />
+                                        <a id="uploadButton4" href="" class="wrap-addpic">
+                                            <!-------->
+                                            <svg class="addpic_1" data-name="addpic"
+                                                widxmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.37 171.53">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #f4eded;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M114.87,82.67V93.44l-1.33.51c-7.82-11.71-15.65-23.41-23.81-35.62L65,91c-2.86-5.51-5.35-10.34-8.35-16.13-7.9,10.48-15.4,20.44-23.55,31.24,2.5.12,4.19.28,5.89.28,15.28,0,30.56.13,45.84-.07,4.14,0,5.53,1.35,5.41,5.44-.24,8.13-.16,16.28,0,24.42,0,3.19-1.17,4.31-4.41,4.3-20.59-.12-41.19.07-61.78-.12-10.6-.1-17.19-7.53-17.23-19-.08-23.09,0-46.18,0-69.27,0-8.47,0-16.94,0-25.41.09-12.29,7-19.18,19.14-19.18q51.57,0,103.14,0c11.79,0,18.63,6.77,18.65,18.4,0,17.27-.11,34.55.09,51.82,0,4-1.19,5.15-5.09,5C133.63,82.5,124.54,82.67,114.87,82.67Z" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" transform="translate(270.71 -7.18) rotate(90)" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <!-- 增加照片 -->
+                                    <div id="image5" class="minor_selfie ">
+                                        <input type="file" id="imgUpload5" accept="image/png, image/jpeg"
+                                            style="display:none" />
+                                        <a id="uploadButton5" href="" class="wrap-addpic">
+                                            <!-------->
+                                            <svg class="addpic_1" data-name="addpic"
+                                                widxmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.37 171.53">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: #f4eded;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1"
+                                                    d="M114.87,82.67V93.44l-1.33.51c-7.82-11.71-15.65-23.41-23.81-35.62L65,91c-2.86-5.51-5.35-10.34-8.35-16.13-7.9,10.48-15.4,20.44-23.55,31.24,2.5.12,4.19.28,5.89.28,15.28,0,30.56.13,45.84-.07,4.14,0,5.53,1.35,5.41,5.44-.24,8.13-.16,16.28,0,24.42,0,3.19-1.17,4.31-4.41,4.3-20.59-.12-41.19.07-61.78-.12-10.6-.1-17.19-7.53-17.23-19-.08-23.09,0-46.18,0-69.27,0-8.47,0-16.94,0-25.41.09-12.29,7-19.18,19.14-19.18q51.57,0,103.14,0c11.79,0,18.63,6.77,18.65,18.4,0,17.27-.11,34.55.09,51.82,0,4-1.19,5.15-5.09,5C133.63,82.5,124.54,82.67,114.87,82.67Z" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" />
+                                                <rect class="cls-1" x="130.19" y="98.16" width="17.49" height="67.21"
+                                                    rx="3.52" transform="translate(270.71 -7.18) rotate(90)" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ab-personal-wrap是包含個人資料欄位＋scroll bar -->
+                    <div class="ab-personal-wrap">
+                        <div class="ab-personaldata-section">
+
+                            <div class="jt-form-data">
+                                <div class="jt-address-title pc-small-title-16">
+                                    <label for="FullName">姓名*</label>
+                                </div>
+                                <div class="jt-address-textbox pc-small-title-16">Ava
+                                    <!-- <input class="text-pink " type="text" style="width:100%" id="jt-fullName" name="FullName" placeholder="請填寫姓名"> -->
+                                </div>
+                            </div>
+
+                            <div class="jt-form-data pc-small-title-16 text-pink">
+                                <div class="jt-address-title pc-small-title-16">
+                                    <label for="gender">性別*</label>
+                                </div>
+                                <div class="jt-address-textbox pc-small-title-16">女生</div>
+                                <!-- <select id="jt-gender " name="Gender">
+                                    <option value="boy">男生</option>
+                                    <option value="girl">女生</option> 
+                                </select> -->
+                            </div>
+
+                            <div class="jt-form-data">
+                                <div class="jt-address-title pc-small-title-16">
+                                    <label for="gender">想認識的性別*</label>
+                                </div>
+                                <div class="jt-address-textbox pc-small-title-16">男生</div>
+                                <!-- <select id="jt-gender" name="Gender">
+                                    <option value="boy">男生</option>
+                                    <option value="girl">女生</option>
+                                    <option value="both">都可以</option>
+                                </select> -->
+                            </div>
+
+                            <div class="jt-form-data">
+                                <div class="jt-address-title pc-small-title-16">
+                                    <label for="birthday">生日*</label>
+                                </div>
+                                <div class="jt-address-textbox pc-small-title-16">
+                                    <input class="text-hint" type="date" style="width:100%" id="jt-fullName"
+                                        name="FullName" placeholder="請選擇時間">
+                                </div>
+                            </div>
+
+                            <div class="jt-form-data">
+                                <div class="jt-address-title pc-small-title-16">
+                                    <label for="job">職業*</label>
+                                </div>
+                                <div class="jt-address-textbox pc-small-title-16">前端工程師</div>
+                                <!-- <select id="jt-job" name="Job">
+                                    <option value="job">工程師</option>
+                                    <option value="job">UI/UX designer</option>
+                                    <option value="job">顧問</option>
+                                    <option value="job">學生</option>
+                                    <option value="job">業務</option>
+                                    <option value="job">老師</option>
+                                    <option value="job">其他</option>
+                                </select> -->
+                            </div>
+
+                            <div class="jt-form-data">
+                                <div class="jt-address-title pc-small-title-16">
+                                    <label for="address">居住地*</label>
+                                </div>
+                                <div class="jt-address-textbox pc-small-title-16">北部</div>
+                                <!-- <select id="jt-address" name="Address">
+                                    <option value="address">北部</option>
+                                    <option value="address">中部</option>
+                                    <option value="address">南部</option>
+                                    <option value="address">西部</option>
+                                    <option value="address">東部</option>
+                                </select> -->
+                            </div>
+
+                            <div class="jt-form-data">
+                                <div class="jt-address-title pc-small-title-16">
+                                    <label for="datetime">方便參加聚會的時間*</label>
+                                </div>
+                                <div class="jt-address-textbox pc-small-title-16">
+                                    <input class="text-hint" type="date" style="width:100%" id="jt-fullName"
+                                        name="FullName" placeholder="請選擇時間">
+                                </div>
+                            </div>
+
+                            <!-- 😫 網路上抓下來的留言板 想要微調margin -->
+                            <!-- 來源： https://www.dotblogs.com.tw/YiruAtStudio/2021/04/12/200157 -->
+                            <div class="pc-small-title-16 text-pink">自我介紹</div>
+                            <div class="ab-form">
+                                <form id="myform" method="" action="" enctype="multipart/form-data">
+                                    <textarea name="content" placeholder="請簡短自我介紹, 讓大家更認識你唷！"
+                                        maxlength="10"></textarea><br>
+                                    <!-- <input type="submit"> -->
+                                </form>
+                            </div>
+
+
+
+                            <div class="btn-pc-big-orange" id="save-btn">儲存</div>
+                        </div>
+
+                        <!-- <div class="kk-scrollbar-all">
+                            <div class="kk-scroll-ball"></div>
+                        </div> -->
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    // 當頁面載入完畢時執行
+    $(document).ready(() => {
+
+        //------ 這邊是一整組的操作行為 的開始 ------
+
+        // 對 id 為 uploadButton1 綁定 click 事件
+        $('#uploadButton1').on('click', function (e) {
+            // 阻止 a tag 點擊後的行為發生
+            e.preventDefault();
+            // 阻止 點擊事件向上傳遞
+            e.stopPropagation();
+            // 對隱藏的 input 做點擊的動作(觸發檔案上傳行為)
+            $('#imgUpload1').click();
+        })
+
+        // 對 id 為 imgUpload1 綁定 change 事件  -> 有圖片上傳的時候觸發
+        // $('#imgUpload1').on('change', function(e) {
+        //     console.log('imgUpload1 change')
+        //     // 取的上傳的檔案
+        //     const [file] = e.target.files;
+        //     if (file) {
+        //         // 隱藏上傳按鈕
+        //         $('#uploadButton1').hide();
+        //         $('#image1')
+        //             // 設定背景圖案 (createObjectURL 可以讓瀏覽器產生一段 url 關聯到上傳的圖片檔案)
+        //             .css('background-image', 'url(' + URL.createObjectURL(file) + ')')
+        //             // 設定相關背景圖案的樣式
+        //             .css({
+        //                 'background-position': 'center',
+        //                 'background-repeat': ' no-repeat',
+        //                 'background-size': 'cover'
+        //             });
+        //         // 釋放記憶體
+        //         URL.revokeObjectURL($('#image1').css('background-image'));
+        //     }
+        // });
+
+        //------ 這邊是一整組的操作行為 的結束 ------
+
+        $('#uploadButton2').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $('#imgUpload2').click();
+        })
+
+        $('#imgUpload2').on('change', function (e) {
+            const [file] = e.target.files;
+            if (file) {
+                // 隱藏上傳按鈕
+                $('#uploadButton2').hide();
+                $('#image2')
+                    // 設定背景圖案
+                    .css('background-image', 'url(' + URL.createObjectURL(file) + ')')
+                    .css({
+                        'background-position': 'center',
+                        'background-repeat': ' no-repeat',
+                        'background-size': 'cover'
+                    });
+                URL.revokeObjectURL($('#image2').css('background-image'));
+            }
+        });
+
+        //------ 第三張上傳照片 ------
+
+        $('#uploadButton3').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $('#imgUpload3').click();
+        })
+
+        $('#imgUpload3').on('change', function (e) {
+            const [file] = e.target.files;
+            if (file) {
+                // 隱藏上傳按鈕
+                $('#uploadButton3').hide();
+                $('#image3')
+                    // 設定背景圖案
+                    .css('background-image', 'url(' + URL.createObjectURL(file) + ')')
+                    .css({
+                        'background-position': 'center',
+                        'background-repeat': ' no-repeat',
+                        'background-size': 'cover'
+                    });
+                URL.revokeObjectURL($('#image3').css('background-image'));
+            }
+        });
+
+        //------ 第四張上傳照片 ------
+
+        $('#uploadButton4').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $('#imgUpload4').click();
+        })
+
+        $('#imgUpload4').on('change', function (e) {
+            const [file] = e.target.files;
+            if (file) {
+                // 隱藏上傳按鈕
+                $('#uploadButton4').hide();
+                $('#image4')
+                    // 設定背景圖案
+                    .css('background-image', 'url(' + URL.createObjectURL(file) + ')')
+                    .css({
+                        'background-position': 'center',
+                        'background-repeat': ' no-repeat',
+                        'background-size': 'cover'
+                    });
+                URL.revokeObjectURL($('#image4').css('background-image'));
+            }
+        });
+
+        //------ 第五張上傳照片 ------
+
+        $('#uploadButton5').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $('#imgUpload5').click();
+        })
+
+        $('#imgUpload5').on('change', function (e) {
+            const [file] = e.target.files;
+            if (file) {
+                // 隱藏上傳按鈕
+                $('#uploadButton5').hide();
+                $('#image5')
+                    // 設定背景圖案
+                    .css('background-image', 'url(' + URL.createObjectURL(file) + ')')
+                    .css({
+                        'background-position': 'center',
+                        'background-repeat': ' no-repeat',
+                        'background-size': 'cover'
+                    });
+                URL.revokeObjectURL($('#image5').css('background-image'));
+            }
+        });
+
+
+    });
+</script>
+
+<script>
+    //第一個鈕 改鈕的id和lightbox的id
+    $('#save-btn').click(function () {
+        console.log(this, '1');
+        $('#btn1').addClass('active');
+        $('.gg-blur').css('display', 'block');
+    })
+
+    // 關掉lightbox
+    $('.LB-close_btn').click(function () {
+        // closelightbox();
+        $('.gg-blur').css('display', 'none');
+        $('.LB-lightbox').removeClass('active');
+    })
+</script>

@@ -37,6 +37,411 @@
 
 
 <style>
+      /* -------------------ed_table------------------------ */
+        /* * {
+            outline: 1px solid red;
+        } */
+    
+    
+        .ed_table {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 316px;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            background: #09005F;
+            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+    
+        .wrapall {
+            width: 80%;
+            margin: auto;
+        }
+    
+        .table_logo {
+            width: 102px;
+            height: 24px;
+            margin: auto;
+            margin-top: 34px;
+    
+        }
+    
+        .table_logo img {
+            width: 100%;
+        }
+    
+        .user_photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+        }
+    
+        .user_photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    
+        .coin_all {
+            display: flex;
+            border: 1px solid #F4EDED;
+            border-left: none;
+            border-right: none;
+            width: 73%;
+            margin: auto;
+            margin-top: 33px;
+        }
+    
+        .left,
+        .right {
+            margin: 6px;
+        }
+    
+        .left {
+            margin-right: 17px;
+        }
+    
+        .right {
+            margin-left: 17px;
+        }
+    
+        .middle {
+            border: 1px solid #F4EDED;
+            border-left: none;
+            height: 49px;
+            margin-top: 15px;
+    
+    
+        }
+    
+        .coinword1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 2.5px;
+            color: #F4EDED;
+            margin-top: 8px;
+        }
+    
+        .coinword2 {
+    
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            letter-spacing: 2.5px;
+            color: #F4EDED;
+            margin-top: 14px;
+        }
+    
+        .coinword3 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            color: #09005F;
+            padding: 6px 3px 6px 5px;
+            background: linear-gradient(45deg, #F66F40, #FFD38D);
+            background: -webkit-linear-gradient(45deg, #F66F40, #FFD38D);
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+    
+        .category_all {
+            width: 71%;
+            margin: auto;
+            margin-top: 24px;
+        }
+    
+        .category_word {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            /* line-height: 30px; */
+            letter-spacing: 2.5px;
+            margin-bottom: 20px;
+            color: #F4EDED;
+            cursor: pointer;
+            z-index: 999;
+        }
+    
+        .arrowleft_all {
+            position: fixed;
+            bottom: 68px;
+            left: 50px;
+            width: 30px;
+            height: 30px;
+    
+        }
+    
+        .arrow_all {
+            position: relative;
+            width: 30px;
+            height: 30px;
+        }
+    
+        .arrowleft1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+        }
+    
+        .circle {
+            border: 1px solid #F4EDED;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            position: absolute;
+        }
+    
+        .arrow1 {
+            position: absolute;
+            top: 6px;
+            left: 7px;
+        }
+    
+        .logout_all {
+            position: fixed;
+            bottom: 68px;
+            left: 225px;
+        }
+    
+        .logouticon {
+            position: relative;
+        }
+    
+        .underline {
+            position: absolute;
+            top: 22px;
+            width: 36px;
+            border: 1px solid #C0BFBF;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+    
+        }
+    
+        .logout_word {
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 2.5px;
+            color: #C0BFBF;
+        }
+    
+        .bottom_all {
+            position: fixed;
+            bottom: 15px;
+            left: 50px;
+        }
+    
+        .bottomword {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 22px;
+            letter-spacing: 2.3px;
+    
+            color: #8F8F8F;
+        }
+    
+        .category-option0,
+        .category-option1,
+        .category-option2,
+        .category-option3,
+        .category-option4,
+        .category-option5,
+        .category-option6,
+        .category-option7 {
+            position: relative;
+        }
+    
+    
+        .option-me0,
+        .option-me1,
+        .option-me2,
+        .option-me3,
+        .option-me4,
+        .option-me5,
+        .option-me6,
+        .option-me7 {
+            position: absolute;
+            top: -8px;
+            left: -10px;
+            display: none;
+        }
+    
+        .option-click {
+            width: 257px;
+            height: 35px;
+            background-color: rgba(196, 196, 196, 0.26);
+            position: relative;
+        }
+    
+        .option-orange {
+            width: 5px;
+            height: 35px;
+            background: linear-gradient(262.71deg, #FDBC44 -19.11%, #EA3A00 125.42%);
+            position: absolute;
+            right: 0;
+        }
+    
+        .jt-btnMenu {
+            cursor: pointer;
+        }
+    
+        /* <!-------------------------------- phone --------------------------------> */
+    
+        .phone_logo {
+            width: 102px;
+            height: 24px;
+            margin: auto;
+            /* margin-top: 34px; */
+            padding-top: 34px;
+            margin-bottom: 60px;
+            display: none;
+        }
+    
+        .phone_logo img {
+            width: 100%;
+        }
+    
+        .navbar-p {
+            width: 100%;
+            height: 86px;
+            background: #09005F;
+            position: fixed;
+            bottom: 0;
+            display: none;
+            z-index: 995;
+        }
+    
+        .navbar-p-btn {
+            margin: auto;
+            margin-top: 18px;
+        }
+    
+        .navbar-p-img {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #F4EDED;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            margin: auto;
+    
+        }
+    
+        .icon_3 {
+            width: 16px;
+        }
+    
+        .icon_2 {
+            width: 18px;
+            padding: 0px 0px 2px 0px;
+        }
+    
+        .userphoto-p {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+        }
+    
+        .userphoto-p img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            margin-bottom: 1px;
+        }
+    
+    
+        .navbar-p-word {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            color: #F4EDED;
+            margin-top: 7px;
+        }
+    
+        .kk-user-photo-glow {
+            width: 90px;
+            height: 90px;
+            margin: auto;
+            margin-top: 49px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 7;
+            border-radius: 50%;
+        }
+    
+        .kk-user-photo-glow:hover {
+            background: linear-gradient(45deg, #F66F40, #FFD38D);
+        }
+    
+        .right-content {
+            position: relative;
+        }
+    
+        @media screen and (max-height: 950px) {
+            .profile_all {
+                display: none;
+            }
+        }
+    
+        @media screen and (max-width: 960px) {
+            .kk-user-word{
+                background: linear-gradient(45deg, #F66F40, #FFD38D);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+    
+            }
+            
+            .ed_table {
+                display: none;
+            }
+    
+            .navbar-p {
+                display: block;
+            }
+    
+            .phone_logo {
+                display: block;
+            }
+    
+            .navbar-p-content {
+                width: 100%;
+            }
+        }
+    
+        @media screen and (max-width: 960px) {
+            .ed_table {
+                display: none;
+            }
+    
+            .navbar-p {
+                display: block;
+            }
+    
+            .phone_logo {
+                display: block;
+            }
+    
+            .navbar-p-content {
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    /* -------------------ed_table-end------------------- */
+
     * {
         /* outline: #FF9933 1px solid; */
     }

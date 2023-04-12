@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member_personal-data</title>
+    <!-- 引用favicon -->
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/ON_FIRE.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- 引用背景 -->
+    <link rel="stylesheet" href="./css/amazing-bg.css">
+    <!-- 引用lightbox -->
+    <link rel="stylesheet" href="./css/Lightbox.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./JS/jquery-3.6.0.js"></script>
+
+
+
+<style>
+
+      /* -------------------ed_table------------------------ */
+        /* * {
+            outline: 1px solid red;
+        } */
+    
+    
+        .ed_table {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 316px;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            background: #09005F;
+            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+    
+        .wrapall {
+            width: 80%;
+            margin: auto;
+        }
+    
+        .table_logo {
+            width: 102px;
+            height: 24px;
+            margin: auto;
+            margin-top: 34px;
+    
+        }
+    
+        .table_logo img {
+            width: 100%;
+        }
+    
+        .user_photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+        }
+    
+        .user_photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    
+        .coin_all {
+            display: flex;
+            border: 1px solid #F4EDED;
+            border-left: none;
+            border-right: none;
+            width: 73%;
+            margin: auto;
+            margin-top: 33px;
+        }
+    
+        .left,
+        .right {
+            margin: 6px;
+        }
+    
+        .left {
+            margin-right: 17px;
+        }
+    
+        .right {
+            margin-left: 17px;
+        }
+    
+        .middle {
+            border: 1px solid #F4EDED;
+            border-left: none;
+            height: 49px;
+            margin-top: 15px;
+    
+    
+        }
+    
+        .coinword1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 2.5px;
+            color: #F4EDED;
+            margin-top: 8px;
+        }
+    
+        .coinword2 {
+    
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            letter-spacing: 2.5px;
+            color: #F4EDED;
+            margin-top: 14px;
+        }
+    
+        .coinword3 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            color: #09005F;
+            padding: 6px 3px 6px 5px;
+            background: linear-gradient(45deg, #F66F40, #FFD38D);
+            background: -webkit-linear-gradient(45deg, #F66F40, #FFD38D);
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+    
+        .category_all {
+            width: 71%;
+            margin: auto;
+            margin-top: 24px;
+        }
+    
+        .category_word {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            /* line-height: 30px; */
+            letter-spacing: 2.5px;
+            margin-bottom: 20px;
+            color: #F4EDED;
+            cursor: pointer;
+            z-index: 999;
+        }
+    
+        .arrowleft_all {
+            position: fixed;
+            bottom: 68px;
+            left: 50px;
+            width: 30px;
+            height: 30px;
+    
+        }
+    
+        .arrow_all {
+            position: relative;
+            width: 30px;
+            height: 30px;
+        }
+    
+        .arrowleft1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+        }
+    
+        .circle {
+            border: 1px solid #F4EDED;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            position: absolute;
+        }
+    
+        .arrow1 {
+            position: absolute;
+            top: 6px;
+            left: 7px;
+        }
+    
+        .logout_all {
+            position: fixed;
+            bottom: 68px;
+            left: 225px;
+        }
+    
+        .logouticon {
+            position: relative;
+        }
+    
+        .underline {
+            position: absolute;
+            top: 22px;
+            width: 36px;
+            border: 1px solid #C0BFBF;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+    
+        }
+    
+        .logout_word {
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 2.5px;
+            color: #C0BFBF;
+        }
+    
+        .bottom_all {
+            position: fixed;
+            bottom: 15px;
+            left: 50px;
+        }
+    
+        .bottomword {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 22px;
+            letter-spacing: 2.3px;
+    
+            color: #8F8F8F;
+        }
+    
+        .category-option0,
+        .category-option1,
+        .category-option2,
+        .category-option3,
+        .category-option4,
+        .category-option5,
+        .category-option6,
+        .category-option7 {
+            position: relative;
+        }
+    
+    
+        .option-me0,
+        .option-me1,
+        .option-me2,
+        .option-me3,
+        .option-me4,
+        .option-me5,
+        .option-me6,
+        .option-me7 {
+            position: absolute;
+            top: -8px;
+            left: -10px;
+            display: none;
+        }
+    
+        .option-click {
+            width: 257px;
+            height: 35px;
+            background-color: rgba(196, 196, 196, 0.26);
+            position: relative;
+        }
+    
+        .option-orange {
+            width: 5px;
+            height: 35px;
+            background: linear-gradient(262.71deg, #FDBC44 -19.11%, #EA3A00 125.42%);
+            position: absolute;
+            right: 0;
+        }
+    
+        .jt-btnMenu {
+            cursor: pointer;
+        }
+    
+        /* <!-------------------------------- phone --------------------------------> */
+    
+        .phone_logo {
+            width: 102px;
+            height: 24px;
+            margin: auto;
+            /* margin-top: 34px; */
+            padding-top: 34px;
+            margin-bottom: 60px;
+            display: none;
+        }
+    
+        .phone_logo img {
+            width: 100%;
+        }
+    
+        .navbar-p {
+            width: 100%;
+            height: 86px;
+            background: #09005F;
+            position: fixed;
+            bottom: 0;
+            display: none;
+            z-index: 995;
+        }
+    
+        .navbar-p-btn {
+            margin: auto;
+            margin-top: 18px;
+        }
+    
+        .navbar-p-img {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #F4EDED;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            margin: auto;
+    
+        }
+    
+        .icon_3 {
+            width: 16px;
+        }
+    
+        .icon_2 {
+            width: 18px;
+            padding: 0px 0px 2px 0px;
+        }
+    
+        .userphoto-p {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+        }
+    
+        .userphoto-p img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            margin-bottom: 1px;
+        }
+    
+    
+        .navbar-p-word {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            color: #F4EDED;
+            margin-top: 7px;
+        }
+    
+        .kk-user-photo-glow {
+            width: 90px;
+            height: 90px;
+            margin: auto;
+            margin-top: 49px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 7;
+            border-radius: 50%;
+        }
+    
+        .kk-user-photo-glow:hover {
+            background: linear-gradient(45deg, #F66F40, #FFD38D);
+        }
+    
+        .right-content {
+            position: relative;
+        }
+    
+        @media screen and (max-height: 950px) {
+            .profile_all {
+                display: none;
+            }
+        }
+    
+        @media screen and (max-width: 960px) {
+            .kk-user-word{
+                background: linear-gradient(45deg, #F66F40, #FFD38D);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+    
+            }
+            
+            .ed_table {
+                display: none;
+            }
+    
+            .navbar-p {
+                display: block;
+            }
+    
+            .phone_logo {
+                display: block;
+            }
+    
+            .navbar-p-content {
+                width: 100%;
+            }
+        }
+    
+        @media screen and (max-width: 960px) {
+            .ed_table {
+                display: none;
+            }
+    
+            .navbar-p {
+                display: block;
+            }
+    
+            .phone_logo {
+                display: block;
+            }
+    
+            .navbar-p-content {
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    /* -------------------ed_table-end------------------- */
+
+    * {
+        /* outline: #FF9933 1px solid; */
+    }
+
+    body {
+        min-width: 375px;
+    }
+
+    div,
+    p {
+        margin-bottom: 0px;
+    }
+
+    .page {
+        width: 100%;
+        height: 100%;
+    }
+
+    .left-nav {
+        width: 316px;
+        min-width: 316px;
+        height: 100vh;
+    }
+
+    .content {
+        width: 80%;
+        max-width: 904px;
+        margin-top: 110px;
+        /*待討論*/
+        overflow: hidden;
+    }
+
+    .content1 {
+        display: none;
+        width: 80%;
+        max-width: 904px;
+        background-color: #240173;
+        overflow: hidden;
+        margin-top: 34px;
+    }
+
+    .jt-title {
+        margin-bottom: 57px;
+    }
+
+    /* -------------------------------------- */
+    /* 上半部-2個左右header的container */
+    .ab-header-container {
+        width: 902px;
+        height: 70px;
+        /* outline: #ff60af 1px solid; */
+    }
+
+    /* 上半部-left-header */
+    .ab-left-header {
+        width: 274px;
+        height: 51px;
+        /* outline: #FDBC44 1px solid; */
+
+    }
+
+    /* 上半部-right-header  */
+    .ab-right-header {
+        width: 321px;
+        height: 51px;
+        margin: 0 auto;
+        /* outline: #0000ff 1px solid; */
+        position: relative;
+        padding-top: 20px;
+    }
+
+
+    .ab-ballon-icon {
+        height: 37px;
+        width: 30px;
+        overflow: hidden;
+        position: absolute;
+        top: -45px;
+        right: 100px;
+    }
+
+    .ballon-text {
+        color: #000000;
+        position: absolute;
+        top: 20%;
+        left: 7%;
+        /* font-family: Noto Looped Thai; */
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12px;
+        letter-spacing: 0px;
+
+
+    }
+
+    .ab-ballon-icon img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        margin-bottom: 10px;
+    }
+
+    .ab-progress {
+        width: 284px;
+        height: 12px;
+        border-radius: 8px;
+        background: #FFFFFF;
+        margin: 5px auto 5px;
+        /* outline: #FFFFFF 1px solid; */
+        position: relative;
+    }
+
+    .ab-progress-line {
+        width: 60%;
+        height: inherit;
+        border-radius: 25px 0 0 25px;
+        transition: width .2s linear;
+        background: linear-gradient(45deg, #F66F40, #FFD38D);
+
+    }
+
+    /* <!-- 中間tabs區 --> */
+    .kk-tabs {
+        margin-top: 79px;
+        margin-bottom: 56px;
+    }
+
+    .kk-tab {
+        width: 184px;
+        height: 48px;
+        text-align: center;
+    }
+
+    /* tab金線 */
+    .kk-tab-purchase-history {
+        border-bottom: 2px solid #FFD58E;
+        cursor: pointer;
+    }
+
+    /* tab灰線 */
+    .kk-tab-subscription {
+        border-bottom: 1px solid #FFFFFFB2;
+        cursor: pointer;
+    }
+
+    /* 下半部-content區(分左右兩區) */
+    .content-section {
+        /* outline: #EA3A00 solid 2px; */
+
+
+    }
+
+
+    /* ----------------------------- */
+
+    /* 下半部-content區(右邊資料欄位區) */
+    /* ab-personal-wrap是包含個人資料欄位(欄位長）*/
+
+    .ab-personal-wrap {
+        /* outline: #ffd2d2 1px solid; */
+        width: 60%;
+        margin: auto;
+        display: flex;
+
+    }
+
+    .ab-personaldata-section {
+        width: 100%;
+        margin: auto;
+        /* outline: #00d2d2 5px solid; */
+
+    }
+
+    /* 下拉式選單區的css */
+    /* ------------------------------- */
+
+    /* select選擇器不用➕點 (這是主欄位) (pc-hint)*/
+    select {
+        width: 100%;
+        height: 35px;
+        /* padding-left: 0px; */
+        /* text-hint的顏色 */
+        color: #AFAFAF;
+        background: transparent;
+        /* outline: none; */
+        border: transparent;
+        border-bottom: solid 1px #F4EDED;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 2.5px;
+        font-weight: 700;
+    }
+
+    /* 下拉式選單裡的option*/
+    select option {
+        background: #664D9D;
+        color: #F4EDED;
+        outline: none;
+        border: none;
+        z-index: -2;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 2.5px;
+        font-weight: 700;
+    }
+
+    /* 下拉式選單區 */
+    .jt-form-data {
+        margin-bottom: 27px;
+    }
+
+    input[type=text],
+    input[type=select] {
+        background: transparent;
+        border: none;
+
+        /* border-bottom: 1px solid #ffffffc1; */
+    }
+
+    .jt-address-textbox {
+        outline: 0;
+        border: none;
+        border-bottom: 1px solid #ffffffc1;
+
+    }
+
+    ::-webkit-input-placeholder {
+        /* Chrome, Safari */
+        /* pc-hint */
+        color: #AFAFAF;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 2.5px;
+        font-weight: 700;
+    }
+
+    /* ----------------------------- */
+    /* on fire css區 */
+
+    .pc-small-title-16 p {
+        margin: 0;
+    }
+
+    .text-hint p {
+        margin: 0;
+        border-bottom: solid 1px #F4EDED;
+        width: 100%;
+        /* padding-left: 10px; */
+
+    }
+
+    .btn-pc-big-orange {
+        width: max-content;
+        padding: 3px 22px;
+        border-radius: 20px;
+        height: 30px;
+        color: #240173;
+        background: linear-gradient(226.02deg, #FFDA93 4.21%, #F56638 99.47%);
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 2.5px;
+        font-weight: 700;
+        margin: auto;
+        margin-top: 67px;
+    }
+</style>
+
+
+
+
+<div class="page d-flex ">
+    <div class="gg-blur"></div>
+    <!-- 儲存btn(複製LB-lightbox整個div ，id 內容自己修改) -->
+    <div class="LB-lightbox " id="btn1">
+        <div class="LB-lightbox1">
+            <div class="LB-close_btn"></div>
+            <div class="LB-section d-flex justify-content-between flex-column">
+                <div class="LB-title d-flex pc-title-32 justify-content-center LB-ttitle">
+                    <div class="LB-left text-linear-orange mr-2">&lt;</div>
+                    <p class="text-pink">儲存成功</p>
+                    <div class="LB-right text-linear-orange ml-2">&gt;</div>
+                </div>
+                <div class="LB-content align-items-center d-flex flex-column pc-small-title-16 LB-text">
+                    <p class="text-pink ">繼續填寫更多資料</p>
+                    <p class="text-pink ">可以提升配對準確度哦！</p>
+                </div>
+                <!-- 這裡幫按鈕加個href (style="cursor: pointer;" onclick="window.location='./main-login.php';")-->
+                <div class="d-flex justify-content-center">
+                    <div class="btn-pc-orange LB-btn" style="cursor: pointer;" onclick="window.location='./Member_personal-hobby.html';">前往填寫</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="left-nav"></div>
+    <div class="right-content flex-grow-1 d-flex justify-content-center text-pink">
+        <!-- 殘障框 -->
+        <div class="content">
+            <!--  上半部-個人資料標題 -->
+            <div class="title d-flex flex-wrap justiy-content-between jt-title">
+                <p class="pc-title-32 text-pink"  onclick="window.location='.Member_personal-data.html';">個人資料</p>
+            </div>
+
+            <!--  上半部-個人資料header區（有左邊說明區與右邊進度條區） -->
+            <div class="ab-header-container d-flex justify-content-between align-items-center">
+                <div class="ab-left-header">
+                    <p class="pc-small-title-16 text-pink">個人資料完整度</p>
+                    <p class="pc-hint text-pink">資訊完成度愈高，能提高配對準確度！</p>
+                </div>
+
+                <div class="ab-right-header">
+                    <div class="ab-progress">
+                        <div class="ab-ballon-icon">
+                            <img src="./imgs/location-pin-01.png" alt="">
+                            <div class="ballon-text">60%</div>
+                        </div>
+                        <div class="ab-progress-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中間tab區 -->
+            <div class="kk-tabs d-flex">
+                <div class="kk-tab kk-tab-subscription  pc-small-title-16 " style="cursor: pointer;" onclick="window.location='./Member_personal-data.html';">
+                    <p>個人資料</p>
+                </div>
+                <div class="kk-tab kk-tab-subscription pc-small-title-16 " style="cursor: pointer;" onclick="window.location='./Member_personal-hobby.html';">
+                    <p>興趣喜好</p>
+                </div>
+                <div class="kk-tab kk-tab-subscription pc-small-title-16" style="cursor: pointer;" onclick="window.location='./Member_personal-freetime-in-3days.html';">
+                    <p>3日內有空時間</p>
+                </div>
+                <div class="kk-tab kk-tab-purchase-history pc-small-title-16" style="cursor: pointer;" onclick="window.location='./Member_personal-engineer-verify.html';">
+                    <p>工程師驗證</p>
+                </div>
+                <div class="kk-tab kk-tab-subscription pc-small-title-16" style="cursor: pointer;" onclick="window.location='./Member_personal-preference.html';">
+                    <p>對象偏好</p>
+                </div>
+            </div>
+
+            <!-- 下半部-content-section區(左邊大頭照＋右邊資料欄位）-->
+            <div class="content-section">
+                <!-- ab-personal-wrap是個人資料欄位 -->
+                <div class="ab-personal-wrap">
+                    <div class="ab-personaldata-section">
+                        <div class="jt-form-data">
+                            <div class="jt-address-title pc-small-title-16">
+                                <label for="FullName">GitHub*</label>
+                            </div>
+                            <div class="jt-address-textbox pc-small-title-16">
+                                <input class="text-pink " type="text" style="width:100%" id="jt-fullName" name="FullName" placeholder="請填寫GitHub帳號">
+                            </div>
+                        </div>
+
+                        <div class="jt-form-data">
+                            <div class="jt-address-title pc-small-title-16">
+                                <label for="FullName">公司信箱驗證*</label>
+                            </div>
+                            <div class="jt-address-textbox pc-small-title-16">
+                                <input class="text-pink " type="text" style="width:100%" id="jt-fullName" name="FullName" placeholder="請填寫任職公司信箱">
+                            </div>
+                        </div>
+
+
+                        <div class="btn-pc-big-orange" id="save-btn">儲存</div>
+                    </div>
+
+                    <!-- <div class="kk-scrollbar-all">
+                        <div class="kk-scroll-ball"></div>
+                    </div> -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- <script>
+    //第一個鈕 改鈕的id和lightbox的id
+    $('#save-btn').click(function() {
+        console.log(this, '1');
+        $('#btn1').addClass('active');
+        $('.gg-blur').css('display', 'block');
+    })
+
+    // 關掉lightbox
+    $('.LB-close_btn').click(function() {
+        // closelightbox();
+        $('.gg-blur').css('display', 'none');
+        $('.LB-lightbox').removeClass('active');
+    })
+</script> -->

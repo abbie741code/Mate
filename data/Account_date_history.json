@@ -1,0 +1,28 @@
+{
+    "list": [
+        {
+            "date": "2022/06/13",
+            "time": "21:00",
+            "subject":"美墨炸雞桶餐配肥宅快樂水",
+            "location":"捷運大安站農會大樓3樓 ",
+            "description":"陳之漢，綽號館長，網名飆捍，是出身臺客、意見領袖、企業家..不說廢話，歡迎大家來找我吃炸雞。",
+            "selfie":"imgs/people/boxer1.jpg"
+        },
+        {
+            "date": "2022/06/14",
+            "time": "15:00",
+            "subject":"Switch 漆彈大作戰",
+            "location":"台北市內湖區大湖街206號 ",
+            "description":"小栗旬，綽號煞氣a小栗子...",
+            "selfie":"imgs/people/boxer1.jpg"
+        },
+        {
+            "date": "2022/06/15",
+            "time": "19:00",
+            "subject":"超跑交流聚會",
+            "location":"台北市信義區陶朱隱園1Ｆ ",
+            "description":"Joeman，一起來拍片吧！..."
+            
+        }
+    ]
+}

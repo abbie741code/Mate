@@ -1,0 +1,111 @@
+.gg-blur{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9;
+    background-color: rgba(36, 0, 115, 0.63);
+    display: none;
+    top:0;
+}
+.LB-lightbox{
+    width: 522px;
+    height:228px;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    z-index: 10;
+}
+.LB-lightbox.active{
+    display:block;
+}
+.LB-lightbox1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: solid 3px transparent;
+    border-radius: 27px;
+    background-image: linear-gradient( #240173,  #240173),
+    linear-gradient(to right,  #F66B3D , #FFD891);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.LB-close_btn{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    right: -20px;
+    top: -18px;
+    border:3px solid #FFD891;
+    border-radius: 50%;
+    background-color: #240173;
+}
+.LB-close_btn::before{
+    content: " ";
+    display: block;
+    height: 28px;
+    width: 3px;
+    background: linear-gradient(262.71deg, #FFD891 -19.11%, #F66B3D 125.42%);
+    position: absolute;
+    left: 17px;
+    top: 3px;
+    transform:rotate(45deg);
+    color:#FFD891;
+}    
+.LB-close_btn::after{
+    content: " ";
+    display: block;
+    height: 28px;
+    width: 3px;
+    background: linear-gradient(262.71deg, #FFD891 -19.11%, #F66B3D 125.42%);
+    position: absolute;
+    left: 17px;
+    top: 3px;
+    transform:rotate(-45deg);
+}
+.LB-section{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+.LB-lightbox button{
+    display: block;
+    margin: 0 auto;
+}
+.LB-content{
+    text-align: center;
+}
+@media screen and (max-width:960px){
+    .LB-lightbox{
+        width: 335px;
+        height: 300px;
+    }
+    .LB-ttitle{
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+    }
+    .LB-text{
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+    }
+    .LB-btn{
+        width: max-content;
+        padding: 2px 22px;
+        border-radius: 20px;
+        height: 29px;
+        color:#240173;
+        background: linear-gradient(226.02deg, #FFDA93 4.21%, #F56638 99.47%);
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+    }
+    .LB-section{
+    padding: 50px;
+}
+}

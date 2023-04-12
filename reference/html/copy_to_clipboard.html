@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display:inline-block; vertical-align:top;">
+        <button class="js-copy-bob-btn">Set clipboard to BOB</button><br /><br />
+    </div>
+
+    <script>
+        function fallbackCopyTextToClipboard(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                var successful = document.execCommand("copy");
+                var msg = successful ? "successful" : "unsuccessful";
+                console.log("Fallback: Copying text command was " + msg);
+            } catch (err) {
+                console.error("Fallback: Oops, unable to copy", err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+        function copyTextToClipboard(text) {
+            if (!navigator.clipboard) {
+                fallbackCopyTextToClipboard(text);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(
+                function () {
+                    console.log("Async: Copying to clipboard was successful!");
+                },
+                function (err) {
+                    console.error("Async: Could not copy text: ", err);
+                }
+            );
+        }
+
+        var copyBobBtn = document.querySelector(".js-copy-bob-btn");
+
+        copyBobBtn.addEventListener("click", function (event) {
+            copyTextToClipboard(location.href);
+        });
+
+
+    </script>
+</body>
+
+</html>

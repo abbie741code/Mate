@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Hat Ansible Automates Taipei</title>
+
+    <!-- 網址縮圖 -->
+    <meta property="og：url" content="#" />
+    <meta property="og：type" content="website" />
+    <meta property="og：title" content="#" />
+    <meta property="og：description" content="#" />
+    <meta property="og：image" content="images/share.jpg" />
+    <meta name="description" content="#" />
+
+    <!-- 引用bs5.2.2 (local自行放） -->
+    <!-- <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css"> -->
+    <!-- 引用font awesome 6.2.1  -->
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
+
+    <!-- 引用favicon (local自行放） -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- 自行設定 my bs css -->
+    <link rel="stylesheet" href="SCSS/all.css" />
+    <!-- 自行設定css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        /* outline: 1px solid rgb(141, 114, 127); */
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg nav-padding position-sticky top-0 align-items-center ">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand logo-size ps-0 ps-sm-5 d-flex align-items-center" href="#">
+          <img src="images/logo.png" class="w-100" alt="Logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon white-color"></span> -->
+          <i class="fa-solid fa-bars font-color-white"></i>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end pe-5"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="#time"
+                >活動時間</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#agenda">議程資訊</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#speakers">講師介紹</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- col那層不要另外寫寬度!! -->
+    <main class="mx-auto">
+      <!-- home-page -->
+      <section class="text-center banner-bg w-100" id="time">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <div class="a-logo margin-top-2 padding-bottom-4 ">
+                <img src="images/a-logo.png" alt="" />
+              </div>
+              <div class="row">
+                <div class=" col-md-5 mx-auto">
+                  <div class="redhat-logo padding-bottom-4  mx-auto w-100">
+                    <img src="images/redhat-logo.png" class="w-100" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="padding-bottom-4">
+                <h1>Red Hat Ansible Automates Taipei</h1>
+              </div>
+              <div class="padding-bottom-4">
+                <h1 class="font-color-green">2022.12.6</h1>
+              </div>  
+              <!-- btn -->
+              <div class="margin-bottom-7">
+                <button
+                  type="button"
+                  class="btn btn-outline-warning d-flex mx-auto padding-for-btn align-items-center  "
+                >
+                  <div class="me-3">
+                    <h5>立即報名</h5>
+                  </div>
+                  <div class="btn-icon">
+                    <img src="images/hat.png" alt="" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+
+      <!-- <div class="green-line margin-bottom-2"></div> -->
+
+      <!-- Welcome！ -->
+      <section class="container text-center margin-bottom-2 ">
+        <div class="row">
+          <h1 class="text-warning padding-bottom-8 padding-top-8 welcome-hover">Welcome！</h1>
+          <h6 class="margin-bottom-7">
+            我們很高興地宣布 Red Hat Ansible Automates 2022 即將在台北舉行！ Red
+            Hat Ansible Automates
+            2022，旨在讓您思考如何在快速發展的數位化旅程中提供正確自動化戰略及取得成功所需的組織文化變革。
+            隨著需要快速、複雜配置的虛擬化網路和雲服務的興起，自動化在幫助 IT
+            團隊以更高速、一致和安全提供交付服務的過程中是不可或缺的策略。您可能已經藉由應用自動化獲得了成功，但大多數組織無法在整個企業中擴展這些優勢。無論是基於缺乏熟練人才或是清晰的願景，即使自動化投資都在激增，但從未發揮其真正的潛力。
+            為了取得成功，您需要­­完善的企業策略。
+          </h6>
+        </div>
+      </section>
+
+
+      <!--兩顆球 -->
+      <section class="container text-center margin-bottom-4">
+        <div class="row mx-auto">
+          <div class="col-md-6 mx-auto left-ball-position">
+            <div class="card-circle mx-auto">
+              <div class="card-word w-75">
+                <div class="circle-title d-flex padding-bottom-2">
+                  <img src="images/hat.png" alt="">
+                 <h5 class="mx-2">誰應該參加？</h5> 
+                </div>
+                <div class="circle-content d-flex justify-content-around">
+                  <div class="font-color-white me-5 ">
+                    <ul class="list-style-type text-start ">
+                      <li>IT決策者</li>
+                      <li>DevOps主管和工程師</li>
+                      <li>企業架構師</li>
+                      <li>運營IT主管</li>
+                      <li>系統工程師</li>
+                      <li>核發工程師</li>
+                    </ul>
+                  </div>
+                  <div class="font-color-white">
+                    <ul class="list-style-type text-start">
+                      <li>系統管理員</li>
+                      <li>開發人員</li>
+                      <li>運營人員</li>
+                      <li>網路工程師</li>
+                      <li>安全專業人員</li>
+                      <li>任何對IT自動化感興趣的人</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mx-auto">
+            <div class="card-circle mx-auto">
+              <div class="card-word w-75">
+                <div class="circle-title d-flex padding-bottom-2">
+                  <img src="images/hat.png" alt="">
+                 <h5 class="mx-2 ">為什麼參加？</h5> 
+                </div>
+                <div class="circle-content d-flex justify-content-between">
+                  <div class="font-color-white ">
+                    <p>
+                      在您的企業中創建、擴展和實施自動化。
+                      聽取專家和行業思想領袖的意見，
+                      了解如何通過 Ansible 自動化提高團隊效率。
+                      了解IT自動化的當前趨勢並發覺真實案例場景和最佳實踐。
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+     
+        </div>
+      </section>  
+
+      <!--搶先預約最好的席次！-->
+      <section class="container text-center margin-bottom-4">
+        <div class="row">
+          <h1 class="text-warning padding-bottom-4 ">搶先預約最好的席次！</h1>
+          <h5>
+            加入我們在台北的行列，在這裡您可以分享想法並與紅帽 Ansible專家和其他志同道合的人交流！
+          </h5>
+          <h5>
+            IT 自動化越發成為企業駕馭和管理複雜現代技術環境的必要條件。
+          </h5>
+          <!-- btn -->
+          <div class="padding-top-4 padding-bottom-4">
+            <button
+              type="button"
+              class="btn btn-outline-warning d-flex mx-auto padding-for-btn align-items-center "
+            >
+              <div class="me-3">
+                <h5>立即報名</h5>
+              </div>
+              <div class="btn-icon">
+                <img src="images/hat.png" alt="" />
+              </div>
+            </button>
+          </div>
+        </div>
+        
+      </section>
+
+      <!--報名注意事項提醒-->
+      <section class="green-bg mx-auto text-center margin-bottom-7 " id="agenda">
+        <div class="note-word mx-auto padding-bottom-3 padding-top-3">
+          <h5>
+            本活動採免費報名參加，會中包含實作課程，因此請您<span class="font-color-red">務必</span>自行攜帶筆記型電腦
+          </h5>
+          <div class="container yellow-arrow-line">
+            <img src="images/arrow-line.png" class="w-100"alt="">
+          </div>
+          <div class="d-flex  justify-content-center">
+            <h6 class="me-5">
+              電腦建議硬體規格：
+            </h6>
+            <h6>
+              <ul class="list-style-type text-left">
+                <li>處理器：4 實體 CPU </li>
+                <li>記憶體：可用記憶體至少 8GB ( 16GB 更佳)  </li>
+                <li>磁碟：120 GB ( SSD 為佳) </li>
+              </ul>
+            </h6>
+
+          </div>
+      
+        </div>
+      </section>
+      
+      <!--agenda-->
+      <section class="container mx-auto" >
+        <div class="info-group d-flex justify-content-evenly margin-bottom-2 " >
+          <div class="time text-center">
+            <div class="time-icon mb-2">
+              <i class="fa-regular fa-clock font-50 text-warning "></i>
+            </div>
+            <div class="time-content text-center">
+              <h4>2022/12/6(二)</h4>
+              <h4>10:00-16:30</h4>
+              <h4>(9:30 AM 開始報到)</h4>
+            </div>
+          </div>
+          <div class="dividing-line" >
+            <img src="images/中間分隔線.png" class="w-100"alt="">
+          </div>
+          <div class="location  text-center">
+            <div class="location-icon mb-2">
+              <i class="fa-solid fa-location-dot font-50 text-warning"></i>
+            </div>
+            <div class="location-content text-center">
+              <h4>2022/12/6(二)</h4>
+              <h4>10:00-16:30</h4>
+              <h4>(9:30 AM 開始報到)</h4>
+            </div> 
+          </div>
+        </div>
+
+
+      
+        <div class="agenda-green-line mx-auto w-80 font-color-white  margin-bottom-3" >
+          <div class="row border-top-green p-2">
+            <div class="col-md-6 text-center">
+              <div class="agenda-time">09:30 - 10:00</div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-content">貴賓報到</div>
+            </div>
+          </div>
+          <div class="row border-top-green p-2">
+            <div class="col-md-6 text-center">
+              <div class="agenda-time">10:00 - 10:45</div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-content">在不確定的未來，透過自動化能力做好迎接挑戰的準備 </div>
+            </div>
+          </div>
+          <div class="row border-top-green p-2">
+            <div class="col-md-6 text-center">
+              <div class="agenda-time">10:45 - 11:00</div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-content">Intel 創新之路——數位基礎架構</div>
+            </div>
+          </div>
+          <div class="row border-top-green p-2">
+            <div class="col-md-6 text-center">
+              <div class="agenda-time">11:00 - 11:45</div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-content">自動化的邊緣運算
+                AUTOMATING THE EDGE </div>
+            </div>
+          </div>
+          <div class="row border-top-green p-2">
+            <div class="col-md-6 text-center">
+              <div class="agenda-time">11:45 - 13:30</div>
+            </div>
+            <div class="col-md-6 ">
+              <div class="agenda-content">午餐</div>
+            </div>
+          </div>
+          <div class="row border-top-green p-2 ">
+            <div class="col-md-6 text-center">
+              <div class="agenda-time">13:30 - 16:30</div>
+            </div>
+            <div class="col-md-6">
+              <div class="agenda-content">技術交流工作坊時間：<br>
+                • ANSIBLE 實機操作體驗
+                <br>
+                <br>
+                課程內容： <br>
+                • AUTOMATION PLATFORM 介紹<br>
+                • 環境設定與介紹環境功能
+                <br>
+                <br>
+                休息
+                <br>
+                <br>
+                • 上機操作課程 3+4： <br>
+                DEPLOYING APPLICATIONS TO LINUX HOSTS RETRIEVING INFORMATION FROM AUTOMATION HOSTS <br>
+                • 上機操作課程 5+6 ： <br>
+                SELF-SERVICE IT VIA SURVEYS OVERVIEW OF SYSTEM ROLES FOR RHEL</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="">
+          <button
+            type="button"
+            class="btn btn-outline-warning d-flex mx-auto padding-for-btn align-items-center"
+          >
+            <div class="me-3">
+              <h5>立即報名</h5>
+            </div>
+            <div class="btn-icon">
+              <img src="images/hat.png" alt="" />
+            </div>
+          </button>
+        </div>
+
+      </section> 
+
+
+      <div class="coupon-for-mobile padding-top-3 mx-auto">
+        <img src="images/coupon.png" class="w-100" alt="">
+      </div>
+
+
+      <!-- form -->
+      <section>
+        <div class="container margin-bottom-3">
+          <div class="form-bg position-relative mx-auto border-50 ">           
+            <div class="coupon position-absolute">
+              <img src="images/coupon.png" class="w-100" alt="">
+            </div>
+
+      
+
+            <div class="form position-absolute  mx-auto">
+              <div class="text-center">
+                <div class="form-h4"> 
+                  <i class="fa-regular fa-comment-dots font-color-white font-50 "></i>
+                </div>
+                <h4 class="form-h4">
+                  有任何問題需要詢問嗎？
+                </h4>
+                <h4  class="form-h4">
+                  Contact us
+                </h4>
+
+              </div>
+              <div class="row mb-3 ">
+                <label for="inputEmail3" class="col-6 col-form-label"> 
+                  <h6>姓名*</h6>
+                </label>
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputEmail3"class="col-6 col-form-label"> 
+                  <h6>手機號碼* </h6>
+                </label>
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputEmail3" class="col-6 col-form-label"> 
+                  <h6>電子郵件*</h6>
+                </label>
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputEmail3" class="col-6 col-form-label"> 
+                  <h6>問題敘述*</h6>
+                </label>
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+            
+              <button type="button" class="btn btn-outline-warning mx-auto d-block padding-for-btn ">
+                  <h6 class="text-warning hover-color ">送出</h6>
+              </button>
+            </div>
+
+            <div class="wire-board position-absolute">
+              <img src="images/wire-board.png" class="w-100" alt="">
+            </div>
+             
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- card -->
+      <section id="speakers">
+        <div class="container margin-bottom-10 mx-auto" >
+          <div class="row mx-auto">
+            <div class="col-md-5  mx-auto mb-3 ">
+              <div class="card card-border " >
+                <div class="speaker-img mx-auto mt-2">
+                  <img src="images/speaker-1.png" class="card-img-top padding-bottom-2 w-100" alt="...">
+                </div>
+
+                <div class="card-title font-color-white text-center padding-bottom-2">
+                  講師資訊
+                  <br>魏志龍 Eric Wei,
+                  <br>解決方案工程師
+                </div>
+                <div class="border-top-yellow w-75 mx-auto"></div>
+                <div class="card-body font-color-white ms-3" >
+                  超過25年IT業界經驗，於2001年加入 Teradata，迄今已近20年經驗，目前擔任 Teradata Taiwan 售前支援(Presales) 團隊一員。
+                  <br>加入 Teradata 之前，曾任職於Unisys、EDS等公司。主要工作經驗在於資料倉儲設計、Teradata 資料庫管理、資料分析生態環境架構設計(Analytic Ecosystem Architecture)。
+                  <br>曾參與國內大型資料倉儲專案，如彰化銀行、國泰世華銀行、中華郵政、兆豐金控、安泰銀行、華南銀行、上海商銀、土地銀行、合作金庫…等多項專案。
+                  <br>亦曾擔任資策會資料倉儲系列課程專業講師。
+                </div>
+                <div class="border-top-yellow w-75 mx-auto padding-bottom-2"></div>
+                <div class="card-title font-color-white text-center ">
+                  經歷
+                </div>
+                <div class="card-body font-color-white ">
+                  <ul class="list-style-type ms-4">
+                    <li>匹茲堡大學 University of Pittsburgh (1992~1994), 電腦科學碩士</li>
+                    <li>輔仁大學 Fu-Jen Catholic University (1983~1987), 資訊管理系畢業</li>
+                    <li>證書／證照
+                      <br> Teradata Certified Master V2R5
+                      <br> Teradata V14 Certified Professional
+                    </li>
+                  </ul>      
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 mx-auto">
+              <div class="card card-border " >
+                <div class="speaker-img mx-auto mt-2">
+                  <img src="images/speaker-2.png" class="card-img-top padding-bottom-2 w-100" alt="...">
+                </div>
+
+                <div class="card-title font-color-white text-center padding-bottom-2">
+                  講師資訊
+                  <br>郭柏森 Simon Kuo,
+                  <br>資深產業顧問
+                </div>
+                <div class="border-top-yellow w-75 mx-auto"></div>
+                <div class="card-body font-color-white ms-3">
+                  負責規劃及推廣【跨行業】資料創新應用以及業務顧問諮詢服務。
+                  <br>專長於人工智慧、數位轉型、資料治理、商業智慧以及行銷管理。
+                  <br>
+                </div>
+                <div class="border-top-yellow w-75 mx-auto padding-bottom-5"></div>
+                <div class="card-title font-color-white text-center ">
+                  經歷
+                </div>
+                <div class="card-body font-color-white ">
+                  <ul class="list-style-type ms-4">
+                    <li>Teradata CTO Roadshow 專題演講人</li>
+                    <li>Tableau 視覺化資料探索 (Tableau) 專任講師</li>
+                    <li>【台灣人工智慧學校】臺北總校經理人班第三期班代表</li>
+                    <li>【【台灣人工智慧學校】臺北總校經理人班第三期 AI 產業化創新競賽第一名</li>
+                    <li>【台灣人工智慧學校校友會】創會北區副會長</li>
+                    <li>【財團法人電信技術中心】特聘講師</li>
+                    <li>【資訊工業策進會】特聘講師</li>
+                    <li>【中華電信電信學院】特聘講師</li>
+                    <li>【臺灣銀行行員訓練所】特聘講師</li>
+                    <li>【二代大學】特聘講師</li>
+                  </ul>
+                  
+                  
+                  
+                  
+                       
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- footer -->
+      <section class="green-bg ">
+        <div class="container padding-bottom-3 padding-top-3"> 
+          <ul class="p-14 font-color-white">
+            <li>1.Red Hat 基於維護公共衛生之考量，並且為守望大家的健康安全，本活動將參照台灣中央流行疫情指揮中心最新公告，隨時調整防疫措施，敬請配合防疫相關要求。</li>
+            <li>2.因應政府活動入場之防疫政策 ，Red Hat活動小組會於活動前請您填寫「健康聲明」問卷。</li>
+            <li>3.因應 COVID-19，現場將進行體溫檢測，額溫需低於攝氏37.5度才可入場。</li>
+            <li>4.會議進行期間敬請全程配戴口罩，交談時也請務必保持適當社交安全距離。</li>
+            <li>5.主辦單位保有最終修改、變更、活動議程解釋及取消本活動之權利，若有相關異動將會公告於報名頁面，恕不另行通知。
+              感謝您與我們協力維護公共衛生，為所有與會者提供安全的活動環境。<br>
+              隱私權聲明：<br>
+              感謝您報名參加本活動。主辦單位愛爾蘭商紅帽軟體股份有限公司(下稱本公司)將蒐集您透過本活動報名機制及在本活動過程中所提供之個人資料（包括姓名、職稱、任職公司、電子郵件信箱、電話及地址），予以處理、利用或進行國際傳輸，於台灣不定期但持續為您提供產品、服務、技術、活動或研討會相關訊息、製作客戶名單、進行統計分析或市場調查。
+              <br>請注意，本公司會將您提供之個人資料與本活動協辦單位愛爾蘭商紅帽軟體股份有限公司以及intel分享。本活動協辦單位得於台灣不定期且持續為您提供相關產品、服務、技術、活動或研討會相關訊息、製作客戶名單、進行統計分析或市場調查。
+              <br>除此之外，未經您的許可，本公司不會將您的個人資訊與第三人分享，除非係為完成您所請求的服務或交易所必要或法律要求者。
+              <br>有關您於本活動提供之個人資料，您得依照台灣個人資料保護法相關規定向本公司或本活動贊助單位請求查詢、閱覽、製給複本、補充、更正、停止蒐集/處理/利用、或刪除。</li>
+        </div>
+       
+
+      </section>
+
+    </main>
+
+    <footer class="text-center">
+      <p class="border-top-yellow p-4">
+        "紅帽"是紅帽公司標識的商標或註冊商標，Linux是Linus Torvalds的註冊商標。© 2022年紅帽公司保留所有權利
+      </p>
+    </footer>
+
+    <!-- jq-3.6.0.js & popper.js & bs.js (local自行放） -->
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

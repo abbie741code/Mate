@@ -1,0 +1,728 @@
+html{
+  height: 100%;
+}
+
+body{
+  background: #0E2440;
+ 
+}
+
+nav{
+  background: var(--main-color);;
+  z-index: 99;
+ 
+}
+
+.nav-padding{
+  padding: 16px 0px;
+}
+
+.logo-size{
+ width: 240px; 
+}
+
+.navbar-toggler{
+  border: 0 ; 
+
+}
+
+.navbar-toggler:focus{
+
+  box-shadow: none;
+}
+
+
+@media (max-width: 576px) { 
+  .font-size-mobile li a{
+   font-size: 16px;
+  }
+  
+}
+
+
+
+
+
+.banner-bg{
+  background-image: url(../images/banner-bg2.png);
+  width: 100vw;
+  /* height: 95vh; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom ;
+  /* position: absolute; */
+
+}
+
+
+.redhat-logo{
+ width: 300px;
+
+}
+.margin-top-1{
+  margin-top: 100px;
+}
+
+.margin-top-2{
+  margin-top: 200px;
+}
+
+
+@media (max-width: 576px) { 
+  .mobile-margin-top-100{
+    margin-top:100px 
+  }
+  
+}
+
+
+
+.green-line{
+  width: 100%;
+  border-bottom: 5px solid #6FC5C6;
+}
+
+.padding-for-btn{
+  padding: 6px 24px;
+}
+
+.btn-outline-warning-form{
+  --bs-btn-color: #FFCA70;
+  --bs-btn-border-color: #FFCA70;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #FFCA70;
+  --bs-btn-hover-border-color: #FFCA70;
+  --bs-btn-focus-shadow-rgb: 255, 202, 112;
+  --bs-btn-active-color: #000;
+  /* --bs-btn-active-bg: #FFCA70; */
+  --bs-btn-active-border-color: #FFCA70;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  /* --bs-btn-disabled-color: #FFCA70; */
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #FFCA70;
+  --bs-gradient: none;
+}
+
+.go-down{
+  width: 50px;
+  
+  
+}
+
+@media (max-width: 576px) { 
+  .go-down{
+    width: 35px;
+    position: relative;
+    right: -30px;
+    bottom: -20px;
+  }
+  
+}
+
+
+/* go-down */
+#go-down {
+  /* position: fixed; */
+  
+}
+
+.card-circle{
+  background-image: url(../images/card-circle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width:400px;
+  height:400px;
+  position: relative;
+  
+}
+
+.left-ball-position{
+  margin-top:-150px ;
+  margin-bottom: 36px
+}
+/* 
+@media screen and (max-width: 576x) {
+  .card-circle {
+    background-image: url("../images/small-circle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:400px;
+    height:400px;
+    position: relative;
+    
+  }
+} */
+
+@media (max-width: 576px) { 
+  .card-circle {
+    background-image: url("../images/small-circle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:300px;
+    height:300px;
+    position: relative;
+    
+  }
+}
+
+
+.card-word{
+  position: absolute;
+  /* left: 0;
+  right: 0;
+  top: 40%;
+  bottom: 0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+.circle-a-logo{
+  width: 129px;
+}
+
+.list-style-type{
+  list-style-type: disc
+}
+
+.green-bg,
+.green-bg-agenda{
+  background-color: var(--main-color);
+}
+
+
+@media (max-width: 576px) { 
+  .green-bg-agenda{
+    margin-bottom: 48px;
+  }
+}
+
+.dividing-line{
+  width: 80px;
+}
+
+
+@media (max-width: 768px) { 
+  .dividing-line{
+    display: none;
+ 
+  }
+}
+
+.border-top-green{
+  border-top: 2px solid var(--main-color);
+  
+}
+
+@media (max-width: 768px) { 
+.agenda-content{
+  text-align: center;
+
+  }
+}
+
+.coupon{
+  width: 40%;
+}
+.form-bg{
+  background-image: url("../images/form_101.png");
+  max-width: 100%;
+  width: 1000px;
+  height: 1100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  /* position: absolute; */
+
+}
+
+@media (max-width: 760px) { 
+  .form-bg{
+    background-image: url("../images/form-for-mobile.png");
+    max-width: 100%;
+    
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center;
+    margin-top: -200px;
+   
+  }
+
+ 
+}
+
+
+
+
+.form{
+   /* left: 0;
+  right: 0;
+  top: 40%;
+  bottom: 0; */
+  top: 63%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+
+}
+
+@media (max-width: 760px) { 
+
+  .form{
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+ 
+}
+
+/* form裡面的內容字要變小 */
+@media (max-width: 1500px) { 
+
+	.form-h4 > .font-50{
+		font-size: 30px;
+		line-height: 150%;
+	
+	}
+
+	.form-h4{
+		font-size: 18px;
+		line-height: 150%;
+	
+	}
+	
+	label > h6{
+		font-size: 14px;
+		line-height: 150%;
+	
+	}
+
+  .form-control{
+    padding: 0;
+  }
+}
+
+.coupon{
+ width: 450px;
+ top: 60%;
+ left: 10%;
+ transform: translate(-50%, -50%);
+ z-index: 1;
+
+}
+
+
+
+
+@media (max-width: 576px) { 
+
+  .mobile-margin-bottom-0{
+   margin-bottom: 0;
+  }
+ 
+}
+
+
+.border-50{
+  /* border: 5px solid #6dc37a; */
+}
+
+
+@media (max-width: 760px) { 
+  .coupon{
+    display:none;
+   
+   }
+}
+
+.coupon-for-mobile{
+  display: none;
+}
+
+@media (max-width: 760px) { 
+  .coupon-for-mobile{
+    display:block;
+    width: 360px;
+    /* right: 60px; */
+    top: -100px; 
+    /* top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; */
+    margin-top: 100px;
+   
+   }
+}
+
+
+
+
+.wire-board{
+  width: 1000px;
+  bottom: -20%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+ @media (max-width: 760px) { 
+  .wire-board{
+    display:none;
+  }
+}
+
+.hover-color:hover{
+  color: #ffffff !important;
+}
+
+.card-border{
+  border:2px solid #FFCA70; 
+}
+
+
+.speaker-img{
+ width: 20%;
+ 
+}
+
+.border-top-yellow{
+  border-top: 2px solid #FFCA70; 
+}
+
+.border-top-yellow-move{
+  position:absolute;
+  left:0;
+  width:100%;
+  height:5px;
+  /* border-radius:50%; */
+  background-color :#FFCA70;
+  animation:move 5s infinite;
+}
+
+@keyframes move{
+  0%{
+    left:0;
+  }
+  50%{
+    left:200px;
+  }
+  100%{
+    left:500px;
+  }
+} 
+
+/* css特效 */
+
+.btn{
+  transition: .3s;
+
+}
+
+
+.btn:hover{
+  transform: scale(1.1);
+}
+
+li a:hover{
+	color:#FFCA70 !important;
+	transform: scale(1.1);
+	
+}
+
+@media (max-width: 576px) { 
+  li a:hover{
+   
+    transform: translate(5px,0px);
+    
+  }
+}
+
+
+.welcome-hover:hover{
+  transform: scale(1.1);
+}
+
+.card-hover:hover{
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) { 
+  .card-hover:hover{
+    transform: scale(1.01);
+  }
+}
+
+
+.go-down-hover:hover{
+  transform: translate(0px,10px);
+}
+
+.go-top-hover:hover{
+  transform: translate(0px,-10px);
+}
+
+
+.margin-center{
+  margin: 0 auto;
+
+}
+
+
+
+.scroll-to-top{
+  width: 50px;
+}
+
+
+@media (max-width: 576px) { 
+  .scroll-to-top{
+    width: 35px;
+    position: relative;
+    right: -30px;
+    bottom: -20px;
+  }
+  
+}
+
+
+
+
+
+
+/* 兩顆球球特效 */
+.ball-rotate:hover{
+
+  -moz-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -o-transform:rotate(5deg);
+  -ms-transform:rotate(5deg);
+  transform:rotate(5deg);
+  /* transform: scale(1.1); */
+}
+
+.ball-rotate-2:hover{
+
+
+  -moz-transform:rotate(-5deg);
+  -webkit-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+  transform:rotate(-5deg);
+}
+
+/* logo特效 */
+.box {
+  /* width: 10rem;
+  height: 10rem; */
+  border-radius: 30px;
+ 
+}
+
+.animation--rotate {
+  animation-name:rotate;
+  /* animation-duration:3s; */
+  /* animation-iteration-count:infinite; */
+  animation-timing-function:ease-in-out;
+  
+  animation:6s ease-in-out rotate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* ------------------------------ */
+/* banner */
+
+.animation-scale-1 {
+  animation-name:scale-banner;
+  animation-duration:3s;
+  animation-iteration-count:1;
+  animation-timing-function:linear;
+}
+
+@keyframes scale-banner {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* 文字特效 */
+.animation-scale {
+  animation-name:scale-world;
+  animation-duration:7s;
+  animation-iteration-count:3;
+  animation-timing-function:linear;
+}
+
+@keyframes scale-world {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* form文字特效 */
+.animation-scale-form {
+  animation-name:scale-form;
+  animation-duration:3s;
+  animation-iteration-count:10;
+  animation-timing-function:linear;
+}
+
+@keyframes scale-form {
+  0% {
+    transform: scale(0.8);
+  }
+
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 星星特效 */
+.animation-scale-star {
+  animation-name:scale;
+  animation-duration:3s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.7);
+  }
+  75% {
+    tranform: scale(2);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+/* agenda中間仙女棒特效 */
+.dividing-line-rotate {
+  animation-name:rotate;
+  /* animation-duration:3s; */
+  /* animation-iteration-count:; */
+  animation-timing-function:ease-in-out;
+  
+  animation:5 10s ease-in-out rotate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@media (max-width: 576px) { 
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+ 
+}
+
+
+
+
+
+/* coupon */
+.animation-scale-coupon {
+  animation-name:scale-coupon;
+  animation-duration:3s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+@keyframes scale-coupon {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* btn */
+.animation-btn {
+  animation-name:animation-btn;
+  animation-duration:3s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+}
+
+@keyframes animation-btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
